@@ -1,46 +1,63 @@
 <h1>Please Enter Your Details For Our Dating Website! </h1>
 
-<form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="get">
-  <div>
-  Your Face
-  <input type="file">
-  </div>
-  <br>
+<form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post" enctype="multipart/form-data">
+    <fieldset>
+      <legend>Your Face:</legend>
+      Your Image:  <input type="file" id="preview" name="avatar" required><br>
+      Image preview:
+      <img src="" id="preview">
+    </fieldset><br>
+    
+     <fieldset>
+      <legend>Your General Details</legend>
+      <label for="name">Name:</label>
+      <input type="text" name="name" placeholder="Your Full Name" autofocus>
+      <br>
+      Gender:
+      <input type="radio" name="gender" value="male">Male
+      <input type="radio" name="gender" value="female">Female<br>
+      <label for="age">Age:</label>
+      <input type="number" min="0" max="99" step="1" value="18" id="age" name="age" required><br>
+      <label for="birthday">Date of birth:</label>
+      <input type="date" id="birthday" name="birthday"><br>
+      <label for="color">Favorite color:</label>
+      <input type="color" id="color" name="color"> <br>
+      Which country:
+        <select name="countries">
+          <option value=""></option>
+          <option value="ca">Canada</option>
+          <option value="us">U.S.A</option>
+          <option value="au">Austrailia</option>
+          <option value="de">Germany</option>
+          <option value="uk">England</option>
+        </select>
+      <br>
+    </fieldset><br>
+    
+    <fieldset>
+      <legend>Your Indicators</legend>
+             
+      <label for="height">Height:</label>
+      Short <input type="range" min="0" max="100" step="5" value="50" id="height" name="mood"> Tall<br>
+      <br>
+      <label for="salary">Salary:</label>
+      Poor <input type="range" min="0" max="100" step="5" value="50" id="height" name="salary"> Rich<br>
+      <br>
+    </fieldset><br>
 
-  <div>
-  Your General Details
-  <br>
-  <label for="name">Name:</label>
-  <input type="text" name="name" autofocus>
-  <br>
-  Gender:
-  <br>
-  Age:
-  <br>
-  Date of birth:
-  <br>
-  Favorite color:
-  <br> 
-  Which country:
-  <br>
-  </div>
-
-  <div>
-  Your Indicators
-  Height: Short   Tall
-  <br>
-  Salary:Poor Rich 
-  </div>
-  <br>
-
-  <div>
-  Your Contact Information
-    <text area rows="3" cols="60" name="feedback">
-    Email:
-    Mobile:
-    Address:
-    </text area>
-  Method of contact you:   Email Whatsapp  In-app chat
-  <imnput type="submit" value="Submit">
-  </div>
+    <fieldset>
+      <legend>Your Contact Information</legend>
+      <label for="email-add">Email:</label>
+      <input type="email" name="email-add" autofocus><br><br>
+      <label for="mobile">Mobile:</label>
+      <input type="tel" name="mobile" autofocus><br><br>
+      Address:<textarea rows="3" cols="40" name="feedback"></textarea>
+      <br>
+      Method of contact you:
+      <input type="checkbox" name="contact" value="email">Email
+      <input type="checkbox" name="contact" value="whatsapp">Whatsapp 
+      <input type="checkbox" name="contact" value="inapp">In-app
+      <input type="checkbox" name="contact" value="chat">Chat<br>       
+    </fieldset><br>
+  <input type="submit" value="Submit">
 </form>
