@@ -10,26 +10,31 @@
 <form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post" enctype="multipart/form-data">
     <fieldset>
       <legend>Your Face:</legend>
-      Your Image:  <input type="file" id="preview" name="avatar" required><br>
-      Image preview:
+      <label for="image" >Your Image:</label> 
+      <input type="file" id="preview" name="avatar" required><br><br>
+      <label for="preview" >Image preview:</label>
       <img src="" id="preview">
     </fieldset><br>
     
      <fieldset>
       <legend>Your General Details</legend>
       <label for="name">Name:</label>
-      <input type="text" name="name" placeholder="Your Full Name" autofocus>
-      <br>
-      Gender:
+      <input type="text" name="name" placeholder="Your Full Name" autofocus><br><br>
+
+      <label for="gender" >Gender:</label>
       <input type="radio" name="gender" value="male">Male
-      <input type="radio" name="gender" value="female">Female<br>
+      <input type="radio" name="gender" value="female">Female<br><br>
+
       <label for="age">Age:</label>
-      <input type="number" min="0" max="99" step="1" value="18" id="age" name="age" required><br>
+      <input type="number" min="0" max="99" step="1" value="18" id="age" name="age" required><br><br>
+
       <label for="birthday">Date of birth:</label>
-      <input type="date" id="birthday" name="birthday"><br>
+      <input type="date" id="birthday" name="birthday"><br><br>
+
       <label for="color">Favorite color:</label>
-      <input type="color" id="color" name="color"> <br>
-      Which country:
+      <input type="color" id="color" name="color"> <br><br>
+
+      <label for="country">Which country:</label>
         <select name="countries">
           <option value=""></option>
           <option value="ca">Canada</option>
@@ -56,10 +61,15 @@
       <legend>Your Contact Information</legend>
       <label for="email-add">Email:</label>
       <input type="email" name="email-add" autofocus><br><br>
+
       <label for="mobile">Mobile:</label>
-      <input type="tel" name="mobile" autofocus><br><br>
-      Address:<textarea rows="3" cols="40" name="feedback"></textarea>
-      <br>
+      <input type="tel" name="mobile" autofocus><br> 
+
+      <p class="formfield">
+        <label for="address">Address:</label>
+        <textarea rows="3" cols="40" name="feedback"></textarea><br><br>
+      </p>
+
       Method of contact you:
       <input type="checkbox" name="contact" value="email">Email
       <input type="checkbox" name="contact" value="whatsapp">Whatsapp 
