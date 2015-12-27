@@ -31,12 +31,14 @@
       display:inline-block;
       text-align: center;
       background:red;
+      width: 50px;
     } 
     .purple {
       color: white;
       display:inline-block;
       text-align:center;
       background:purple;
+      width: 50px;
     } 
     .formfield * {
     vertical-align: top;
@@ -89,12 +91,16 @@
       <legend>Your Indicators</legend>
       <div>       
         <label for="height">Height:</label>
-        <div class="red">Short</div><input type="range" min="0" max="100" step="5" value="50" id="height" name="height"> <div class="purple">Tall </div> 
+        <div class="red">Short</div>
+          <input type="range" min="0" max="100" step="5" value="50" id="height" name="height">
+        <div class="purple">Tall </div> 
       </div>
 
       <div>
         <label for="salary" >Salary:</label>
-        <div class="red">Poor</div> <input type="range" min="0" max="100" step="5" value="50" id="height" name="salary"><div class="purple">Rich</div><br> 
+        <div class="red">Poor</div>
+          <input type="range" min="0" max="100" step="5" value="50" id="height" name="salary">
+        <div class="purple">Rich</div><br> 
       </div>
     </fieldset><br>
 
